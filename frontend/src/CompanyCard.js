@@ -3,11 +3,13 @@ import { Link, useParams } from "react-router-dom"
 
 const CompanyCard = () => {
     const { handle } = useParams();
-    
+
     return (
-        <Link to={`/companies`}>
-            <div>{handle}</div>
-        </Link>
+        <div>
+            <Link to={`/companies`}>
+                <div>{handle}</div>
+            </Link>
+        </div>
     )
 }
 
