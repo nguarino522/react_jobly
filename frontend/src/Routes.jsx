@@ -2,12 +2,13 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CompanyList from "./CompanyList";
 import CompanyDetail from "./CompanyDetail";
+import Homepage from "./Homepage";
 
 const Routing = () => {
     return (
         <div>
             <Routes>
-                <Route path="/" />
+                <Route path="/" element={< Homepage />} />
                 <Route path="/login" />
                 <Route path="/signup" />
                 <Route path="/companies" element={<CompanyList />} />

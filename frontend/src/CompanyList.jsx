@@ -3,6 +3,7 @@ import CompanyCard from "./CompanyCard";
 import JoblyApi from "./JoblyApi";
 import Row from 'react-bootstrap/Row';
 import Container from "react-bootstrap/Container";
+import SearchForm from "./SearchForm";
 
 const CompanyList = () => {
 
@@ -19,6 +20,7 @@ const CompanyList = () => {
 
     return (
         <Container>
+            <SearchForm searchFor={getCompanies}/>
             <Row>
                 {companies.map(c => (
                     <CompanyCard
