@@ -20,17 +20,25 @@ const CompanyList = () => {
 
     return (
         <Container>
-            <SearchForm searchFor={getCompanies}/>
+            <SearchForm searchFor={getCompanies} />
             <Row>
-                {companies.map(c => (
-                    <CompanyCard
-                        key={c.handle}
-                        handle={c.handle}
-                        name={c.name}
-                        description={c.description}
-                        logoUrl={c.logoUrl}
-                    />
-                ))}
+                {companies.length
+                    ? (
+                        <>
+                            {companies.map(c => (
+                                <CompanyCard
+                                    key={c.handle}
+                                    handle={c.handle}
+                                    name={c.name}
+                                    description={c.description}
+                                    logoUrl={c.logoUrl}
+                                />
+                            ))
+                            }
+                        </>
+                    ) : (
+                        <p className="alert alert-info">Sorry, no results were found!</p>
+                    )}
             </Row>
         </Container>
     )
