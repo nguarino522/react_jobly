@@ -4,6 +4,7 @@ import JoblyApi from "./JoblyApi";
 import Row from 'react-bootstrap/Row';
 import Container from "react-bootstrap/Container";
 import SearchForm from "./SearchForm";
+import LoadingSpinner from "./LoadingSpinner";
 
 const CompanyList = () => {
 
@@ -17,6 +18,8 @@ const CompanyList = () => {
         let companies = await JoblyApi.getCompanies(name);
         setCompanies(companies);
     }
+
+    if (!companies) return <LoadingSpinner />;
 
     return (
         <Container>

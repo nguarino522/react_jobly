@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import JobCardList from "./JobCardList";
 import JobCard from "./JobCard";
+import LoadingSpinner from "./LoadingSpinner";
 
 const JobList = () => {
 
@@ -18,6 +19,8 @@ const JobList = () => {
         let jobs = await JoblyApi.getJobs(title);
         setJobs(jobs);
     }
+
+    if (!jobs) return <LoadingSpinner />;
 
     return (
         <Container>

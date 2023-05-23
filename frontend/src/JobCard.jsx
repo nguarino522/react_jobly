@@ -10,7 +10,7 @@ const JobCard = ({ id, title, salary, equity, companyName }) => {
             <Card className="JobCard" style={{ width: '22rem' }}>
                 <Card.Header><h5>{title}</h5></Card.Header>
                 <Card.Body>
-                    <Card.Text><h6>{companyName}</h6></Card.Text>
+                    <Card.Text><b>{companyName}</b></Card.Text>
                     <Card.Text>Salary: {salary ? salary : "n/a"}</Card.Text>
                     <Card.Text>Equity: {equity ? equity : "n/a"}</Card.Text>
                     <Button variant="success">Apply</Button>{' '}

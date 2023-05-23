@@ -5,10 +5,11 @@ import JobCardList from "./JobCardList";
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import LoadingSpinner from "./LoadingSpinner";
+import Card from 'react-bootstrap/Card';
 
 const CompanyDetail = () => {
     const { handle } = useParams();
-    const [company, setCompany] = useState([]);
+    const [company, setCompany] = useState(null);
 
     useEffect(() => {
         async function getCompany() {
@@ -22,9 +23,11 @@ const CompanyDetail = () => {
 
     return (
         <Container>
-            <div className="CompanyDetail col-md-8 offset-md-2">
-                <h4>{company.name}</h4>
-                <p>{company.description}</p>
+            <div>
+                <Card className="mb-2">
+                    <h4>{company.name}</h4>
+                    <p>{company.description}</p>
+                </Card>
                 <Row>
                     <JobCardList jobs={company.jobs} />
                 </Row>
