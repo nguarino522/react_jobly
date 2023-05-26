@@ -1,25 +1,40 @@
-import React from "react";
-
+import React, { useContext } from "react";
 import { Navbar, Nav } from 'react-bootstrap';
+import UserContext from "./UserContext";
 
-const NavBar = () => {
-  return (
+const NavBar = ({ logout }) => {
+  const { currentUser } = useContext(UserContext);
+  
+  const loggedInNav = () => {
+    return (
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand className="m-3" href="/">Jobly</Navbar.Brand>
+        <Nav className="ms-auto p-3">
+          <Nav.Link href="/companies">Companies</Nav.Link>
+          <Nav.Link href="/jobs">Jobs</Nav.Link>
+          <Nav.Link href="/profile">Profile</Nav.Link>
+          <Nav.Link href="/" onClick={logout} >Logout {currentUser.username}</Nav.Link>
+        </Nav>
+      </Navbar>
+    )
+  }
+
+  const loggedOutNav = () => {
+    return (
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand className="m-3" href="/">Jobly</Navbar.Brand>
-      {/* <Nav className="mr-auto p-3">
-        <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/contact">Contact</Nav.Link>
-      </Nav> */}
       <Nav className="ms-auto p-3">
-        <Nav.Link href="/companies">Companies</Nav.Link>
-        <Nav.Link href="/jobs">Jobs</Nav.Link>
-        <Nav.Link href="/profile">Profile</Nav.Link>
         <Nav.Link href="/login">Login</Nav.Link>
         <Nav.Link href="/signup">SignUp</Nav.Link>
-        <Nav.Link href="/">Logout</Nav.Link>
       </Nav>
     </Navbar>
+    )
+  }
+
+  return (
+    <>
+      {currentUser ? loggedInNav() : loggedOutNav()}
+    </>
   );
 };
 

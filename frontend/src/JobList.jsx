@@ -4,7 +4,6 @@ import SearchForm from "./SearchForm";
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import JobCardList from "./JobCardList";
-import JobCard from "./JobCard";
 import LoadingSpinner from "./LoadingSpinner";
 
 const JobList = () => {
