@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot with logo 1`] = `
+<DocumentFragment>
+  <div
+    class="col"
+  >
+    <div
+      class="CompanyCard-container"
+    >
+      <div
+        class="CompanyCard card"
+        style="width: 22rem;"
+      >
+        <a
+          class="CompanyCard-link"
+          href="/companies/rithm"
+        >
+          <img
+            class="card-img-top"
+            src="/logo192.png"
+          />
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title h5"
+            >
+              Rithm School
+            </div>
+            <p
+              class="card-text"
+            >
+              Become an exceptional developer in 16 weeks.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot without logo 1`] = `
+<DocumentFragment>
+  <div
+    class="col"
+  >
+    <div
+      class="CompanyCard-container"
+    >
+      <div
+        class="CompanyCard card"
+        style="width: 22rem;"
+      >
+        <a
+          class="CompanyCard-link"
+          href="/companies/algo"
+        >
+          <img
+            class="card-img-top"
+            src="/logo192.png"
+          />
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title h5"
+            >
+              Algo School
+            </div>
+            <p
+              class="card-text"
+            >
+              Become a mediocre developer in 160 weeks.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

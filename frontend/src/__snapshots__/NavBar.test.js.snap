@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar navbar-expand navbar-dark bg-dark"
+  >
+    <a
+      class="m-3 navbar-brand"
+      href="/"
+    >
+      Jobly
+    </a>
+    <div
+      class="ms-auto p-3 navbar-nav"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="/companies"
+        href="/companies"
+      >
+        Companies
+      </a>
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="/jobs"
+        href="/jobs"
+      >
+        Jobs
+      </a>
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="/profile"
+        href="/profile"
+      >
+        Profile
+      </a>
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="/"
+        href="/"
+      >
+        Logout testuser
+      </a>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot when logged out 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar navbar-expand navbar-dark bg-dark"
+  >
+    <a
+      class="m-3 navbar-brand"
+      href="/"
+    >
+      Jobly
+    </a>
+    <div
+      class="ms-auto p-3 navbar-nav"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="/login"
+        href="/login"
+      >
+        Login
+      </a>
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="/signup"
+        href="/signup"
+      >
+        SignUp
+      </a>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
